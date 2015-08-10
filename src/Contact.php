@@ -1,21 +1,21 @@
 <?php
 class Contact
 {
-    private $description;
+    private $name;
 
-    function __construct($description)
+    function __construct($name)
     {
-        $this->description = $description;
+        $this->name = $name;
     }
 
-    function setDescription($new_description)
+    function setName($new_name)
     {
-        $this->description = (string) $new_description;
+        $this->name = (string) $new_name;
     }
 
-    function getDescription()
+    function getName()
     {
-        return $this->description;
+        return $this->name;
     }
 
     function save()

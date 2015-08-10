@@ -13,22 +13,22 @@
               <p>
               <ul>
                  {% for task in tasks %}
-                     <li>Name: {{ task.getDescription }}</li>
+                     <li>Name: {{ task.getName }}</li>
                  {% endfor %}
               </ul>
             </p>
           {% endif %}
           </div>
           <div class="col-sm-6">
-          <form action='/create_contact' method='post'>
+          <form action='/create_contact' method='post' class="form-horizontal">
               <label for='description'>Name:</label>
               <input id='description' name='description' type='text' class="form-control">
 
               <button type='submit' class="btn btn-info">Add contact</button>
           </form>
 
-          <form action='/delete_contacts' method='post'>
-              <button type='submit' class="btn btn-danger">Delete all contacts</button>
+          <form action='/delete_contacts' method='post' class="form-horizontal">
+              <button type='submit' class="btn btn-danger btn-xs">Delete all contacts</button>
           </form>
         </div>
       </div>
