@@ -1,0 +1,37 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <title>Welcome!</title>
+</head>
+    <body>
+        <div class="container">
+          <div class="row">
+              <div class="col-sm-6">
+          <h1>Your Contacts</h1>
+
+          {% if tasks is not empty %}
+              <p>
+              <ul>
+                 {% for task in tasks %}
+                     <li>Name: {{ task.getDescription }}</li>
+                 {% endfor %}
+              </ul>
+            </p>
+          {% endif %}
+          </div>
+          <div class="col-sm-6">
+          <form action='/create_contact' method='post'>
+              <label for='description'>Name:</label>
+              <input id='description' name='description' type='text' class="form-control">
+
+              <button type='submit' class="btn btn-info">Add contact</button>
+          </form>
+
+          <form action='/delete_contacts' method='post'>
+              <button type='submit' class="btn btn-danger">Delete all contacts</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
