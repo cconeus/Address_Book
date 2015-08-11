@@ -1,3 +1,7 @@
+// I still am having difficulty with routes. I took this code from the todolist we used earlier in the week and attempted to 
+//adapt it, and so far it works well however I ran out of time attempting to add the other fields for phone number
+//and address. 
+
 <?php
 class Contact
 {
